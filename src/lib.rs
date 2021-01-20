@@ -43,7 +43,7 @@ pub fn read_graph<R: Read>(graph_file: R) -> Graph {
     }
     // XXX Some graphs count two edges per undirected edge,
     // some count one.
-    assert!(nedges == nedges_seen || 2 * nedges == nedges_seen);
+    assert!(nedges == nedges_seen || nedges == 2 * nedges_seen);
     assert!(nnodes >= result.len());
     result
 }
